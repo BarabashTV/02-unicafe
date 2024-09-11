@@ -6,17 +6,19 @@ const Statistics = (props) => {
   }
 
   return (
-    <div>
-      <StatisticLine text="Good" value={props.good} />
-      <StatisticLine text="Neutral" value={props.neutral} />
-      <StatisticLine text="Bad" value={props.bad} />
-      <StatisticLine text="All" value={props.totalFeedbacks} />
-      <StatisticLine text="Average" value={props.average.toFixed(2)} />
-      <StatisticLine
-        text="Positive"
-        value={`${props.positivePercentage.toFixed(2)} %`}
-      />
-    </div>
+    <table>
+      <tbody>
+        <StatisticLine text="Good" value={props.good} />
+        <StatisticLine text="Neutral" value={props.neutral} />
+        <StatisticLine text="Bad" value={props.bad} />
+        <StatisticLine text="All" value={props.totalFeedbacks} />
+        <StatisticLine text="Average" value={props.average.toFixed(2)} />
+        <StatisticLine
+          text="Positive"
+          value={`${props.positivePercentage.toFixed(2)} %`}
+        />
+      </tbody>
+    </table>
   );
 };
 
